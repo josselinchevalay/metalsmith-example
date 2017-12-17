@@ -11,3 +11,18 @@ layout: layout.html
 <a href="/posts/third-post/">Third post</a>
 
 <a href="/posts/fourth-post/">Fourth post</a>
+
+<script src="https://unpkg.com/ipfs/dist/index.js"></script>
+
+<script>
+const node = new Ipfs()
+
+node.on('ready', () => {
+  // Your node is now ready to use \o/
+
+  // stopping a node
+  node.stop(() => {
+    // node is now 'offline'
+  })
+})
+</script>
